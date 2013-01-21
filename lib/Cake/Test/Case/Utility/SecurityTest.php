@@ -28,22 +28,6 @@ class SecurityTest extends CakeTestCase {
 	public $sut = null;
 
 /**
- * testInactiveMins method
- *
- * @return void
- */
-	public function testInactiveMins() {
-		Configure::write('Security.level', 'high');
-		$this->assertEquals(10, Security::inactiveMins());
-
-		Configure::write('Security.level', 'medium');
-		$this->assertEquals(100, Security::inactiveMins());
-
-		Configure::write('Security.level', 'low');
-		$this->assertEquals(300, Security::inactiveMins());
-	}
-
-/**
  * testGenerateAuthkey method
  *
  * @return void
